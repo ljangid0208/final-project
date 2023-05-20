@@ -1,0 +1,67 @@
+body {
+    background-color: #eee;
+  }
+
+
+
+  
+  
+  /* Remove the jumbotron's default bottom margin */ 
+   .jumbotron {
+    margin-bottom: 0;
+    margin-top: 5rem;
+  }
+  .text-center{
+margin-bottom: 2rem;
+  }
+  .panel-body{
+    width: 22rem;
+  }
+  .col-sm-4{
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+ .img-responsive{
+    width: 20rem;
+    height: 15rem;
+
+ }
+
+
+ /* .img-responsive:hover{
+
+width: 21rem;
+height: 16rem;
+ } */
+
+
+
+
+ .panel-body {
+  position: relative;
+  display: inline-block;
+}
+
+
+.image-slider__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+   opacity: 0;
+  transition: opacity 0.3s ease;
+  
+}
+
+
+.panel-body:hover .image-slider__overlay {
+  opacity: 1;
+}

@@ -1,0 +1,25 @@
+.App{
+    background-color:lightgray;
+    height:95vh;
+}
+
+.slider-h1{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    margin-top: 2vh;
+    padding-top:7vh;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.probtn{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    height: 7vh;
+    background-color: orange;
+    border:none;
+}

@@ -1,0 +1,150 @@
+
+
+/* .center{
+    justify-content: center;
+    align-items: center;
+margin: auto;
+}
+.carClick_1:hover{
+    cursor: pointer; */
+   /* transform: scale(1.1); */
+/* }
+
+
+
+
+.carClick_2:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+} */
+
+
+
+   /* width: 50%;
+   height: 50%; */
+   
+   /* background-image: url("../image/car1-removebg-preview.png");
+   background-image: url("../image/car2-removebg-preview.png"); */
+
+
+.homepage{
+    background-image:url("../image/1000_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg");
+/* max-height: 100%; */
+background-repeat: no-repeat;
+
+  background-size: cover;
+width: 100%;
+max-height:100vh;
+height:100%;
+background-color: pink;
+
+}
+   .home_text{
+    /* max-height: 30vh; */
+
+    margin-bottom:3rem;
+    font-weight:100;
+    font-size:6vmax;
+    margin-bottom: 0rem;
+    color:black;
+    /* margin-left:10rem; */
+    left:5vh;
+    margin-top: 6vh;
+    /* text-align: center; */
+    
+    font-family:'Times New Roman', Times, serif;
+}
+.home_text>span{
+    color:orange;
+}
+.h6{
+    /* height: 30vh; */
+    margin-bottom:10rem;
+    margin-left:25%;
+    margin-right:30%;
+    color:black;
+    font-size:15px;
+}
+.explore_btn{
+    width: 27vh;
+    font-size: large;
+ /* margin-top:6rem; */
+    height:2.8rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    position: relative;
+    background-color: orange;
+    border: none;
+    margin-bottom: 2rem;
+text-decoration: none;
+}
+
+.carClick_1:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.carClick_2:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 575px) {
+    .home_text {
+        margin-top: 1rem;
+        margin-left: 4rem;
+      margin-right:3rem;
+    }
+    .h6{
+        margin-left: 4rem;
+        font-size: small;
+        margin-top: 1rem;
+        margin-right:5rem;
+        margin-bottom: 3rem;
+    }
+
+.homepage{
+    background-size: cover;
+}
+  }
+  
+  /* For screens between 576px and 992px */
+  @media (min-width: 576px) and (max-width: 991px) {
+    .home_text {
+        margin-top: 2rem;
+      margin-left: 6rem;
+      margin-right:5rem;
+      
+    }
+    .h6{
+        margin-left:6rem;
+        font-size: medium;
+        margin-top: 1rem;
+        margin-right: 9rem;
+        margin-bottom: 7rem;
+    }
+
+.homepage{
+    background-size: cover;
+}
+    
+  }
+  
+  /* For screens larger than 992px */
+  @media (min-width: 992px) {
+    .home_text {
+      margin-left: 13rem;
+      margin-right:9rem;
+    }
+    .h6{
+        margin-left:13rem;
+        font-size: medium;
+        margin-top: 2rem;
+    }
+    .homepage{
+        background-size: cover;
+    }
+  }

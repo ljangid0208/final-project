@@ -1,0 +1,18 @@
+.servicerow{
+background-color: cornflowerblue;
+margin-bottom: 5rem;
+}
+
+.servicebtn{
+    border:2px solid white;
+    width:9rem;
+    height:2.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    color:white;
+    background-color:transparent;
+        border-radius:0px;
+
+}
