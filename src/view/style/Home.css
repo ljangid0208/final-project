@@ -28,7 +28,8 @@ margin: auto;
 
 
 .homepage{
-    background-image:url("../image/1000_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg");
+    background-image:url("../image/luxury-modern-dark-living-room-interior_46686-552.jpg");
+    /* /1000_F_551699573_1wjaMGnizF5QeorJJIgw5eRtmq5nQnzz.jpg */
 /* max-height: 100%; */
 background-repeat: no-repeat;
 
@@ -66,7 +67,7 @@ background-color: pink;
     font-size:15px;
 }
 .explore_btn{
-    width: 27vh;
+    width: 28vh;
     font-size: large;
  /* margin-top:6rem; */
     height:2.8rem;

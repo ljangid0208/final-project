@@ -1,6 +1,6 @@
 .product-div{
     width:40vh;
-    height: 60vh;
+    height: 55vh;
     background-color: lightgray;
     box-shadow: 0px 10px 10px ;
     margin-bottom: 1vh;
@@ -25,7 +25,10 @@ text-align: center;
 font-size: medium;
 margin-top: 0vh;
 padding: 0px;
-margin-bottom:1vh;
+margin-bottom:0vh;
+}
+.span_1{
+    text-decoration: line-through;
 }
 .product-btn{
     justify-content: center;
@@ -37,7 +40,7 @@ margin-bottom:1vh;
     height: 6vh;
     border: none;
     color:white;
-    margin-top: 5vh;
+    margin-top: 2vh;
     border-radius: 5px;
     background-color:#2c3338;
     

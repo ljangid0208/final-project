@@ -23,7 +23,6 @@ import {
 import {AllFurnitureData} from "../data/data";
 function Details() {
 
-
   const nav = useNavigate()
   const loc = useLocation()
   const[AllFurnitureData, setallfurnituredata] = useState(loc.state)
@@ -38,47 +37,17 @@ function Details() {
     console.log(success);
     if(success)
     {
-        alert(message)
+        alert("Your Product Successfully Add ")
         nav('/Addtocart')
     }
     else
     {
-        alert(message)
+        alert("Please Login First")
+        nav('/Login')
     }
-}
 
-  
+}  
   return (
-    // <Container>
-    //   <Row>
-    //     <Col lg={6} >
-    //       <div className='w-75 px-3'>
-    //     <img src={AllFurnitureData.img} alt="" className='productimg'/></div>
-    //     </Col>
-    //     <Col lg={6}>
-    //     <div>
-    //       <p  className='details-text2'>{AllFurnitureData.text2}</p>
-    //       <p className='details-text3'>{AllFurnitureData.text3}</p>
-    //       <p>{AllFurnitureData.Text4}</p>
-    //       <div className='sell'>
-    //       <p>{AllFurnitureData.mrp_rate}</p>
-    //       <p className='mrp'>{AllFurnitureData.Price}</p>
-    //      </div>
-    //      <div className='sell1'> 
-    //      <p>{AllFurnitureData.mrp_rate}</p>
-    //       <p className='mrp'>{AllFurnitureData.Price}</p>
-    //      </div>
-    //       <div className='details-button'>
-    //       <button className='details-button1' value={AllFurnitureData} onClick={()=> AllFurnitureDataaddtocart(AllFurnitureData)} style={{height:'3rem',width:'10rem'}}>Add To Cart</button>
-    //         <Link className='butnow' to={"/Payment"}>  <button className='details-button1' style={{height:'3rem',width:'10rem'}}>Buy Now</button></Link>
-        
-    //       </div>
-    //     </div>
-    //     </Col>
-  
-    //   </Row>
-    // </Container>
-
 
 
     <div class="container">
@@ -100,11 +69,11 @@ function Details() {
                         </div>
                         <div class="row ">
 
-                        <div class="col-lg-6 " style={{display:'flex'}}>
+                        <div class="col-lg-6 col-md-6" style={{display:'flex'}}>
                         <Rating style={{display:'flex',justifyContent:'center',alignItems:'center',margin:'auto',marginLeft:'3vh'}} initialValue={AllFurnitureData.star} className="mt-4">{AllFurnitureData.star}</Rating>
                         </div>
                         
-                        <div class="col-lg-6 " style={{display:'flex'}}>
+                        <div class="col-lg-6 col-md-6" style={{display:'flex'}}>
                             <p class="mt-4  p-0 price-pro price">${AllFurnitureData.Price}</p>
                             <p class="mt-5 p-0 price-pro">${AllFurnitureData.mrp_rate}</p>
                             <hr class="p-0 m-0"/>
@@ -112,17 +81,17 @@ function Details() {
                         
                         </div>
                     </div>
-                    <div class="col-lg-6 pt-2">
+                    <div class="col-lg-12 pt-2">
                             <h5>Product Detail</h5>
                         <div class="row">   
-                             <div class="col-lg-6 pt-2"> 
+                             <div class="col-lg-6 col-md-6 col-sm-6 pt-2"> 
                             <span>-{AllFurnitureData.text1}</span><br></br>
                             <span>-{AllFurnitureData.text2}</span><br></br>
                             <span>-{AllFurnitureData.text_3}</span><br></br>
                             <span>-{AllFurnitureData.text4}</span><br></br>
                             <span>-{AllFurnitureData.text5}</span><br></br>
                             </div>
-                            <div class="col-lg-6 pt-2">
+                            <div class="col-lg-6 col-md-6 col-sm-6 pt-2">
                             <span>-{AllFurnitureData.heading}</span>
                             </div>
 
@@ -130,10 +99,10 @@ function Details() {
                         <hr class="m-0 pt-2 mt-2"/>                        
                         <div class="col-lg-12 mt-3">
                         <div class="row">
-                            <div class="col-lg-6 pb-2">
+                            <div class="col-lg-6 col-md-6 col-sm-6 pb-2">
                                     <Button  value={AllFurnitureData} onClick={()=> AllFurnitureDataaddtocart(AllFurnitureData)} class="btn btn-danger w-100" style={{width:'10rem',height:'2.5rem'}}>Add To Cart</Button>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
                                     <Button  class="btn btn-success w-100" href="/Payment"  style={{width:'10rem',height:'2.5rem'}}>Shop Now</Button>
                             </div>
                         </div>

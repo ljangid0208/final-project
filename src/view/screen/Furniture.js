@@ -152,7 +152,7 @@ function AllFurniture() {
 AllFurnitureData.map(function(d)
 {
   return(<MDBCol md="12" xl="10">
-  <MDBCard className="shadow-0 border rounded-3 mt-5 mb-3" onClick={()=>nav('/details',{state:d})}>
+  <MDBCard className="shadow-0 border rounded-3 mt-5 mb-3" >
     <MDBCardBody>
       <MDBRow>
         <MDBCol md="12" lg="3" className="mb-4 mb-lg-0">
@@ -217,7 +217,7 @@ AllFurnitureData.map(function(d)
           </div>
           <h6 className="text-success">Free shipping</h6>
           <div className="d-flex flex-column mt-4">
-            <MDBBtn color="primary" size="sm" >
+            <MDBBtn color="primary" size="sm" onClick={()=>nav('/details',{state:d})}>
               Details
             </MDBBtn>
             {/* <MDBBtn outline color="primary" size="sm" className="mt-2">

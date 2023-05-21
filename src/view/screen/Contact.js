@@ -9,20 +9,11 @@ function ContactUs() {
 function sendEmail(e){
   e.preventDefault();
   emailjs.sendForm('service_ytzpuxf','template_28write',e.target,"CQLs6y2eBt3ZUOK2S").then(res=>{
-    <div><Card className="text-center" style={{backgroundColor:'gray'}}>
-    <Card.Header style={{color:'orange'}}>Success </Card.Header>
-    <Card.Body>
-      <Card.Title>Form Fill </Card.Title>
-      <Card.Text>
-        The Form Fill SuccessFully
-      </Card.Text>
-      <Button variant="primary" href='/home' style={{backgroundColor:'#2c3338',color:'white'}}>Go Back</Button>
-    </Card.Body>
-  </Card></div>
+    
     console.log(res);
+    alert("Form Fill SuccessFully");
   }).catch(err=>console.log(err));
   e.target.reset()
-
 }
 
   return (

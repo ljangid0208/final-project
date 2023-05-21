@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavDropdown,Nav,Navbar,Button,Container } from 'react-bootstrap'
+import {Col, Row,NavDropdown,Nav,Navbar,Button,Container, Form } from 'react-bootstrap'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Home from './view/screen/Home'
 import Review from './view/screen/Review'
@@ -15,35 +15,37 @@ import logo from './view/image/198fc8a2981818511dd4c313c2176ff8-removebg-preview
 import About from './view/screen/About';
 import Details from './view/screen/Details';
 import Payment from './view/screen/Payment'
-
-
-
+import Servicesupport from './view/screen/Servicesupport'
+import Repair from './view/screen/Repair';
 import AddToCart from './view/screen/AddToCart'
-
-
-
+import Product from './view/screen/Product';
 import { Link } from 'react-router-dom';
-
-import { IoLogoTwitter } from "react-icons/io";
-import { IoLocationSharp } from "react-icons/io5";
-import { GrFacebookOption } from "react-icons/gr";
-import { BsInstagram ,BsFillCarFrontFill} from "react-icons/bs";
-import { FaCopyright, FaLinkedinIn,FaChair } from "react-icons/fa";
-import { RiHome6Fill, RiMotorbikeLine } from "react-icons/ri"
 import { AiOutlineArrowRight } from "react-icons/ai";
-import {BiBed,BiCabinet} from "react-icons/bi"
-import {GiSofa,GiTable} from "react-icons/gi"
-import {MdTableRestaurant} from "react-icons/md"
-
-
-
-
-
-
-
-
+import Feedback from 'react-bootstrap/esm/Feedback';
+import { send } from 'emailjs-com';
+import emailjs from 'emailjs-com'
 
 function App() {
+
+
+
+
+  function sendEmail(e){
+    e.preventDefault();
+    emailjs.sendForm('service_ytzpuxf','template_9x8ifd7',e.target,"CQLs6y2eBt3ZUOK2S").then(res=>{
+     
+      console.log(res);
+      alert("Feedback SuccessFully Submitted");
+    }).catch(err=>console.log(err));
+    e.target.reset()
+  
+  }
+  
+
+
+
+
+
 
 
 
@@ -54,54 +56,19 @@ console.log(localStorage.getItem('user'));
     alert('logout')
     localStorage.setItem('user', false)
     setUser(false)
-    // localStorage.clear()
+     localStorage.clear()
   }
-
-
-
 
 
   return (
     <>
 
     <BrowserRouter>
-{/* 
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar> */}
-
-
-
-<Navbar bg="light" expand="lg" style={{width:'100%'}}>
-      
-      {/* , zIndex:'1',position:'fixed' */}
-  
+<Navbar bg="light" expand="lg" style={{width:'100%',position:'sticky',zIndex:'999',left:'0',top:'0'}}> 
           <Navbar.Brand href="#home" className='banner_text'><span className='banner_text1'><img src={logo} style={{width:'15vh'}}/>Furni</span><span className='banner_text2'>Beast</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" style={{justifyContent:'center',alignItems:'center',flex:'2.5'}}>
             <Nav className="me-auto">
-  
-  
   <Nav.Link href="/" style={{textAlign:'center',}}>Home</Nav.Link>
   
   
@@ -156,10 +123,12 @@ console.log(localStorage.getItem('user'));
       <Route path='/services' element={<Services/>}/>
       <Route path='/contact' element={<Contact/>}/> 
       <Route path='/about' element={<About/>}/>
-
+<Route path="/servicesupport" element={<Servicesupport></Servicesupport>}></Route>
+<Route path="/repair" element={<Repair></Repair>}></Route>
 <Route path='/addtocart' element={<AddToCart/>}></Route>
 <Route path='/payment' element={<Payment></Payment>}></Route>
 <Route path='/details' element={<Details/>}></Route>
+
       {
             user ? null : <>
               <Route path='/signup' element={<SignUp/>} />
@@ -167,13 +136,10 @@ console.log(localStorage.getItem('user'));
             </>
 
           }
-
+<Route path="/product" element={<Product></Product>}></Route>
           <Route path='/furniture' element ={<Furniture/>}></Route>
 
 
-      {/* <Route path='/login' element={<Login/>}/>
-      <Route path='/signup' element={<SignUp/>}/> */}
-      {/* <Route path='/addtocart' element={<AddToCart></AddToCart>}></Route> */}
     </Routes>
     </BrowserRouter>
 
@@ -190,7 +156,7 @@ console.log(localStorage.getItem('user'));
     <div class="row">
 
       {/* //Grid column */}
-      <div class="col-lg-3 col-md-3 col-sm-6 mx-auto">
+      <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
 
         {/* //Links */}
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Our Branches</h5>
@@ -202,7 +168,7 @@ console.log(localStorage.getItem('user'));
           </li>
           <li>
             <h5 style={{marginBottom:'0vh'}}>Contact Us</h5>
-              GMail:FurniBeast@Gmail.com
+              EMail:FurniBeast@Gmail.com
           </li>
           
           <li>
@@ -216,7 +182,7 @@ console.log(localStorage.getItem('user'));
       <hr class="clearfix w-100 d-md-none" style={{marginBottom:'0rem'}}/>
 
       {/* // Grid column */}
-      <div class="col-lg-3 col-md-3  col-sm-6 mx-auto">
+      <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
 
         {/* //Links */}
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Luxury Furniture</h5>
@@ -231,7 +197,7 @@ console.log(localStorage.getItem('user'));
       <hr class="clearfix w-100 d-md-none" style={{marginBottom:'0rem'}}/>
 
       {/* // Grid column  */}
-      <div class="col-lg-3 col-md-3  col-sm-6 mx-auto">
+      <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
 
         {/* // Links */}
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Quick Links</h5>
@@ -264,10 +230,10 @@ console.log(localStorage.getItem('user'));
       <hr class="clearfix w-100 d-md-none" style={{marginBottom:'0rem'}}/>
 
 {/* // Grid column */}
-      <div class="col-lg-3 col-md-3  col-sm-6 mx-auto">
+      <div class="col-lg-3 col-md-6 col-sm-6 mx-auto">
 
         {/* //Links */}
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Feedback
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-2">Feedback
         </h5>
 
         <ul class="list-unstyled">
@@ -275,6 +241,24 @@ console.log(localStorage.getItem('user'));
             leave a feedback
           </li>
           
+          <form style={{flexDirection:'row',margin:'0px',padding:'0px'}} onSubmit={sendEmail}>
+          <Row style={{flexDirection:'column'}}>
+    <Col className="col-lg-12 col-md-12 col-sm-12 ">
+        <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter Name" name="name"  autoComplete='off' required style={{margin:'0px'}}/>
+        
+        </Col>
+        <Col className="col-lg-12 col-md-12 col-sm-12 ">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" autoComplete='off' required/>
+    </Col>
+
+    <Col className="col-lg-12 col-md-12 col-sm-12">
+        
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder='Message' name="massage" autoComplete='off' required></textarea>
+</Col>
+        <Button type="submit" value="Send" class="btn btn-primary" className="contactbtn" style={{margin:'auto',display:'flex',justifyContent:'flex',alignItems:'center'}}> Send Feedback</Button>
+        </Row> 
+      </form>
+      
         </ul>
 
       </div>
@@ -298,11 +282,6 @@ console.log(localStorage.getItem('user'));
 
       </footer>
       </div>
-
-
-
-
-
 
     </>
   )

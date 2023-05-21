@@ -1,16 +1,81 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import{ useState } from 'react';
+
 import img1 from '../image/1.jpg'
 import img2 from '../image/2.jpg'
 import img3 from '../image/3.jpg'
 import './Review.css'
 function Reviews() {
+  
+    const [index, setIndex] = useState(0);
+  
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+  
   return (
-    <div>
+    <>
 
 
 
+
+<h1 style={{textAlign:'center',fontWeight:'bold'}}>Client's Reviews</h1>
+<Carousel activeIndex={index} onSelect={handleSelect} >
+  
+      <Carousel.Item>
+        <img
+          className="d-block "
+          src={img1}
+          alt="First slide"
+          style={{height:'150px',width:'150px',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',margin:'auto'}}
+        />
+        <Carousel.Caption style={{top:'10rem',color:'black'}}>
+          <h3><b>Aishwarya Rai</b></h3>
+          <h6> 1 Year Ago.</h6>
+          <p>"I recently purchased a Sofa set from this Furniture Website, And I have to say I am beyond impressed with the quality of the furniture. the sofa set is not only stylish,but also incredibly comfortable.the delievery was prompt and the customer service team was very helpful through the process."</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block "
+          src={img3}
+          style={{height:'150px',width:'150px',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',margin:'auto'}}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption style={{top:'10rem',color:'black'}}>
+          <h3 ><b>Aryan Khan</b></h3>
+          <h6>9 Months Ago</h6>
+          <p>I recently purchased a dining table from this furniture Website, and I am extremely satisfied with my purchase. The quality of the table is fantastic, and it was delivered on time without any issues. I would definitely shop here again."</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block"
+          src={img2}
+          style={{height:'150px',width:'150px',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center',margin:'auto'}}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption style={{top:'10rem',color:'black'}}>
+          <h3><b>Salman Khan</b></h3>
+          <h6>5 Months Ago</h6>
+          <p >
+          "I was hesitant about buying furniture online, but this company exceeded my expectations. The item I ordered arrived earlier than expected, and it was exactly as described. The customer support was also helpful in answering my questions. Overall, a positive experience."
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+
+
+
+
+
+{/* 
 <div class="container-xl">
 	<div class="row">
 		<div class="col-lg-8 mx-auto">
@@ -51,7 +116,7 @@ function Reviews() {
 			</div>
 		</div>
 	</div>
-</div>
+</div> */}
 
 
 {/* 
@@ -147,7 +212,7 @@ function Reviews() {
 </div> */}
 
 
-    </div>
+    </>
   )
 }
 

@@ -37,7 +37,8 @@ function ProductList() {
     <div class="col-sm-4">
       <div class="panel panel-primary">
         
-        <div class="panel-body"><img src={modularKitchen} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image"/></div>
+        <div class="panel-body"><img src={modularKitchen} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image"onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay" style={{borderRadius:'10px'}}></div>}</div>
         
       </div>
     </div>
@@ -45,14 +46,15 @@ function ProductList() {
       <div class="panel panel-danger">
         
         <div class="panel-body"><img src={sofa} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image" onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay">Search Sofa</div>}</div>
+        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay" style={{borderRadius:'10px'}}></div>}</div>
         
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-success">
         
-        <div class="panel-body"><img src={cabinet} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image"/></div>
+        <div class="panel-body"><img src={cabinet} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image" onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay" style={{borderRadius:'10px'}}></div>}</div>
         
       </div>
     </div>
@@ -64,21 +66,24 @@ function ProductList() {
     <div class="col-sm-4">
       <div class="panel panel-primary">
         
-        <div class="panel-body"><img src={table} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image"/></div>
+        <div class="panel-body"><img src={table} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image" onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay" style={{borderRadius:'10px'}}></div>}</div>
 
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         
-        <div class="panel-body"><img src={dinning} class="img-responsive" style={{width:"100%",borderRadius:'10px' }}alt="Image"/></div>
+        <div class="panel-body"><img src={dinning} class="img-responsive" style={{width:"100%",borderRadius:'10px' }}alt="Image"onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay" style={{borderRadius:'10px'}}></div>}</div>
         
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         
-        <div class="panel-body"><img src={bed} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image"/></div>
+        <div class="panel-body"><img src={bed} class="img-responsive" style={{width:"100%",borderRadius:'10px'}} alt="Image"onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}/>{isHovered && <div className="image-slider__overlay" style={{borderRadius:'10px'}}></div>}</div>
         
       </div>
     </div>

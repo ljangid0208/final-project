@@ -25,6 +25,7 @@ export default function Cart() {
             if (index !== index1) {
                 arr.push(d);
             }
+            
         })
         console.log(arr);
         let res = await axios.post('removecartitem', arr).catch(e => console.log(e))

@@ -4,6 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import React from 'react'
 import './ProductSlider.css';
 import { ProductSliderData } from '../data/data';
+import { AllFurnitureData } from '../data/data';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 function ProductSlider() {
@@ -45,10 +46,11 @@ function ProductSlider() {
         }
         
     }
-        const pro=ProductSliderData.map((item)=>(
-            <Product name={item.productName}
-            price={item.price}
-            image={item.img}
+        const pro=AllFurnitureData.map((item)=>(
+            <Product productName={item.productName}
+            Price={item.Price}
+            mrp_rate={item.mrp_rate}
+            img={item.img}
             star={item.star}
             btn={item.btn}
             />

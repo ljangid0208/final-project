@@ -1,0 +1,20 @@
+.servicerow{
+    background-color: rgb(13, 75, 192);
+    border: 10px solid ;
+
+    }
+    
+    .servicebtn{
+        border:2px solid white;
+        width:9rem;
+        height:2.5rem;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:auto;
+        margin-bottom: 2rem;
+        color:white;
+        background-color:transparent;
+            border-radius:0px;
+    
+    }

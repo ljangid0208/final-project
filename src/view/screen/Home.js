@@ -1,7 +1,7 @@
 import React from 'react'
 import Contact from './Contact'
 import { Container,Row,Col, Button } from 'react-bootstrap'
-import chair from '../image/chair11.png'
+import chair from '../image/chair1.png'
 // import table from '../image/table-png-31938-removebg-preview.png'
 
 import Services from './Services'
